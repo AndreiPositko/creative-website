@@ -45,8 +45,7 @@
     var $anchor = $(this);
     $('html, body')
       .stop()
-      .animate(
-        {
+      .animate({
           scrollTop: $($anchor.attr('href')).offset().top - 0,
         },
         1500,
@@ -56,7 +55,9 @@
   });
 
   // Scrollspy
-  $('.navbar-nav').scrollspy({ offset: 70 });
+  $('.navbar-nav').scrollspy({
+    offset: 70
+  });
 
   // Magnific Popup
   $('.mfp-image').magnificPopup({
@@ -89,7 +90,9 @@
   });
 
   $('.back-to-top').on('click', function () {
-    $('html, body').animate({ scrollTop: 0 }, 3000);
+    $('html, body').animate({
+      scrollTop: 0
+    }, 3000);
     return false;
   });
 
